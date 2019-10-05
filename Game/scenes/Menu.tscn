@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://scenes/Main_Menu.gd" type="Script" id=1]
+[ext_resource path="res://scripts/Main_Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/character.png" type="Texture" id=2]
 
 [node name="Control" type="Control"]
@@ -38,7 +38,7 @@ margin_bottom = 211.428
 
 [node name="Game Title" type="TextureRect" parent="Panel/Game Title Container"]
 margin_right = 304.0
-margin_bottom = 109.0
+margin_bottom = 108.0
 
 [node name="New Game Container" type="MarginContainer" parent="Panel"]
 margin_left = 100.0

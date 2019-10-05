@@ -3,7 +3,8 @@
 [ext_resource path="res://scripts/KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://assets/Patreon sprites 1/3.png" type="Texture" id=2]
 
-[sub_resource type="Animation" id=1]
+
+[sub_resource type="Animation" id=6]
 resource_name = "idleDown"
 length = 0.001
 tracks/0/type = "value"
@@ -19,7 +20,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=7]
 resource_name = "idleLeft"
 length = 0.001
 tracks/0/type = "value"
@@ -35,7 +36,7 @@ tracks/0/keys = {
 "values": [ 4 ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=8]
 resource_name = "idleRight"
 length = 0.001
 tracks/0/type = "value"
@@ -51,7 +52,7 @@ tracks/0/keys = {
 "values": [ 8 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=9]
 resource_name = "idleUp"
 length = 0.001
 tracks/0/type = "value"
@@ -67,7 +68,8 @@ tracks/0/keys = {
 "values": [ 12 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=3]
+resource_name = "moveDown"
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -83,7 +85,8 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=4]
+resource_name = "moveLeft"
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -99,7 +102,8 @@ tracks/0/keys = {
 "values": [ 4, 5, 6, 7 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=2]
+resource_name = "moveRight"
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -115,7 +119,8 @@ tracks/0/keys = {
 "values": [ 8, 9, 10, 11 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=5]
+resource_name = "moveUp"
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -131,7 +136,7 @@ tracks/0/keys = {
 "values": [ 12, 13, 14, 15 ]
 }
 
-[sub_resource type="CapsuleShape2D" id=9]
+[sub_resource type="CapsuleShape2D" id=1]
 radius = 7.1046
 height = 14.8539
 
@@ -146,15 +151,15 @@ vframes = 4
 hframes = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/idleDown = SubResource( 1 )
-anims/idleLeft = SubResource( 2 )
-anims/idleRight = SubResource( 3 )
-anims/idleUp = SubResource( 4 )
-anims/moveDown = SubResource( 5 )
-anims/moveLeft = SubResource( 6 )
-anims/moveRight = SubResource( 7 )
-anims/moveUp = SubResource( 8 )
+anims/idleDown = SubResource( 6 )
+anims/idleLeft = SubResource( 7 )
+anims/idleRight = SubResource( 8 )
+anims/idleUp = SubResource( 9 )
+anims/moveDown = SubResource( 3 )
+anims/moveLeft = SubResource( 4 )
+anims/moveRight = SubResource( 2 )
+anims/moveUp = SubResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -14 )
-shape = SubResource( 9 )
+shape = SubResource( 1 )
