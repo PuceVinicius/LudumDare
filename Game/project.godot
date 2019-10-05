@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="LudumDareGame"
-run/main_scene="res://scenes/scene.tscn"
+run/main_scene="res://scenes/map.tscn"
 config/icon="res://icon.png"
 
 [rendering]

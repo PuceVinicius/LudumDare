@@ -47,6 +47,7 @@ func _ready():
 	
 	pass 
 
+# Using itens
 func _on_event_toxicity(amount):
 	toxicity = minmax_calc(toxicity, amount)
 	#if toxicity == 100:
