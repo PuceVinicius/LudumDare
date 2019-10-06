@@ -19,3 +19,7 @@ func _on_Quit_Button_pressed():
 
 func _on_Options_Button_pressed():
 	get_tree().change_scene("res://scenes/Options_Menu.tscn")
+
+
+func _on_New_Game_Button_pressed():
+	pass # Replace with function body.

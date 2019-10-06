@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/Main_Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/character.png" type="Texture" id=2]
+[ext_resource path="res://assets/samples/sample(1).png" type="Texture" id=3]
+[ext_resource path="res://assets/Spritesheet/roguelikeSheet_transparent.png" type="Texture" id=4]
 
 [node name="Control" type="Control"]
 show_behind_parent = true
@@ -62,6 +64,8 @@ margin_bottom = 380.0
 [node name="Options_Button" type="TextureButton" parent="Panel/Options Container"]
 margin_right = 270.0
 margin_bottom = 40.0
+texture_normal = ExtResource( 3 )
+expand = true
 
 [node name="Quit Container" type="MarginContainer" parent="Panel"]
 margin_left = 100.0
@@ -72,6 +76,8 @@ margin_bottom = 420.0
 [node name="Quit_Button" type="TextureButton" parent="Panel/Quit Container"]
 margin_right = 270.0
 margin_bottom = 40.0
+texture_normal = ExtResource( 4 )
+expand = true
 
 [node name="Logo Container" type="MarginContainer" parent="Panel"]
 margin_left = 581.0
@@ -82,5 +88,6 @@ margin_bottom = 450.0
 [node name="Logo" type="TextureRect" parent="Panel/Logo Container"]
 margin_right = 343.0
 margin_bottom = 300.0
+[connection signal="pressed" from="Panel/New Game Container/New_Game_Button" to="Panel" method="_on_New_Game_Button_pressed"]
 [connection signal="pressed" from="Panel/Options Container/Options_Button" to="Panel" method="_on_Options_Button_pressed"]
 [connection signal="pressed" from="Panel/Quit Container/Quit_Button" to="Panel" method="_on_Quit_Button_pressed"]
