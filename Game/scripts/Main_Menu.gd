@@ -22,4 +22,5 @@ func _on_Options_Button_pressed():
 
 
 func _on_New_Game_Button_pressed():
+	get_tree().change_scene("res://scenes/map.tscn")
 	pass # Replace with function body.

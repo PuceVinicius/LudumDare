@@ -137,7 +137,7 @@ tracks/0/keys = {
 [sub_resource type="CircleShape2D" id=9]
 radius = 7.99468
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="Birina" type="KinematicBody2D"]
 position = Vector2( -0.0809975, 0.0809956 )
 script = ExtResource( 1 )
 
