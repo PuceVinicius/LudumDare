@@ -8,8 +8,8 @@ func _input(event):
 			if b.name == "Character":
 				if (global.itemFlash == true and global.itemMusic == true
 					and global.itemOld == true):
-					print("VOCE GANHOU BIGO")
+					global.dialogAppend("CONGRATULATION, YOU WON!!")
 				else:
-					print("Ainda ta faltando coisa :(")
+					global.dialogAppend("Some items are still missing :(")
 	pass # Replace with function body.
 	

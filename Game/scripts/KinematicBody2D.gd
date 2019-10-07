@@ -25,16 +25,14 @@ func _input(event):
 			var rng = RandomNumberGenerator.new()
 			rng.randomize()
 			var rand = rng.randi_range(0,size-1)
-			print(rand)
 			var it = global.itemsFound[rand]
-			print(global.itemsFound)
 			if (it != "Old Magazine" and it != "Music Player" 
 				and it != "Flashlight"):
 				consume(global.itemsFound[rand])
 				global.itemsFound.erase(global.itemsFound[rand])
 				global.itemsFoundSize -= 1
 			else:
-				print("Tried to eat something inedible")
+				global.dialogAppend("You tried to eat something inedible")
 				
 func consume(item):
 	var rng = RandomNumberGenerator.new()
@@ -45,7 +43,7 @@ func consume(item):
 	global._on_event_thirst(rng.randi_range(-5, 20))
 	global._on_event_tired(rng.randi_range(-5, 20))
 	global._on_event_hp(rng.randi_range(-5, 20))
-	print("You consumed a " + item + "!")
+	global.dialogAppend("You consumed a " + item + "!")
 	pass
 
 func update_sprite_and_move(delta):

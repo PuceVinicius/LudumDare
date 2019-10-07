@@ -6,7 +6,6 @@ var randItem
 # var b = "text"
 func _ready():
 	randItem = global.get_random_item()
-	print(randItem)
 
 # Called when the node enters the scene tree for the first time.
 func _input(event):
@@ -26,9 +25,9 @@ func _input(event):
 	
 func show_message(randItem):
 	if randItem != null:
-		print("Congratulation! You have found " + randItem + "!!")
+		global.dialogAppend("Congratulation! You have found " + randItem + "!!")
 	else:
-		print("No items left")
+		global.dialogAppend("No items left")
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

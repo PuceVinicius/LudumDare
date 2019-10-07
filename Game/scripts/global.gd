@@ -9,6 +9,9 @@ signal sig_tir
 signal sig_hp
 signal sig_hap
 
+# Dialog signal
+signal sig_dialog
+
 export var toxicity = 0
 export var immunity = 100
 export var hunger = 100
@@ -30,6 +33,15 @@ export var thirst_cd = 0
 export var tired_cd = 0
 export var happy_cd = 0
 
+
+# Initial dialog
+export var dialog = ["Hey, this is the fastest game tutorial ever.", "In this world, a Plague is whipping the whole nation.", 
+			  "You are the only one who have survived, however, to remain alive, you need to find the bunker and the three needed items.",
+			  'You can interact with buildings, chests, cars trunk and the bunker with "E"',
+			  'And consume a random item with "F", they will grant you some regeneration',
+			  'Good Luck!!!']
+export var page = 0
+
 # Random Items definition
 export var items = ["Food Can", "Bread", "Candy", "Meat", "Water", "Juice", "Soda",
 				    "Beer", "Medical Herb", "Bandages", "Antibiotics", "First Aid Kit", 
@@ -46,6 +58,11 @@ export var itemsFoundSize = 0
 export var itemFlash = false
 export var itemOld = false
 export var itemMusic = false
+
+func dialogAppend(string):
+	if string != null:
+		emit_signal("sig_dialog", string)
+	pass
 
 func _ready():
 	emit_signal("sig_tox", toxicity)
