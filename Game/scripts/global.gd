@@ -1,37 +1,24 @@
 extends Node2D
 
 # Declare member variables here. Examples:
-var toxicity = 0
-var immunity = 0
-var hunger = 0
-var thirst = 0
-var tired = 0
-var hp = 0
-var happy = 0
-var is_working = 0
+export var toxicity = 10
+export var immunity = 0
+export var hunger = 0
+export var thirst = 0
+export var tired = 0
+export var hp = 0
+export var happy = 0
+export var is_working = 0
 #var sanity
 
 # Timers
+export var hunger_timer = 15
+export var thirst_timer = 10
+export var tired_timer = 10
+export var happy_timer = 15
 
-var hunger_timer = 15
-var thirst_timer = 10
-var tired_timer = 10
-var happy_timer = 15
 # --
-var hunger_cd = 0
-var thirst_cd = 0
-var tired_cd = 0
-var happy_cd = 0
-
-#inventory variables
-var bag_size = 0
-var bag_max_size = 100
-var bag_is_full = false
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-func _input(event): #for when it is being picked up
-	if Input.is_action_just_released("ui_open_menu"):
-		print("You've got ", bag_size, " breads OOOO")
+export var hunger_cd = 0
+export var thirst_cd = 0
+export var tired_cd = 0
+export var happy_cd = 0
