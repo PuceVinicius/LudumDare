@@ -1,26 +1,23 @@
-extends Panel
+extends Node2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var settings_button
+var quit_button
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	settings_button = get_node("Panel/Settings Warning")
+	quit_button = get_node("Panel/Quit Text")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_Start_pressed():
+	get_tree().change_scene("res://scenes/map.tscn")
 
+func _on_Settings_pressed():
+	settings_button.show()
 
-func _on_Quit_Button_pressed():
+func _on_Kill_pressed():
 	get_tree().quit()
 
+func _on_Back_pressed():
+	settings_button.hide()
 
-func _on_Options_Button_pressed():
-	get_tree().change_scene("res://scenes/Options_Menu.tscn")
-
-
-func _on_New_Game_Button_pressed():
-	get_tree().change_scene("res://scenes/map.tscn")
-	pass # Replace with function body.
+func _on_Quit_pressed():
+	quit_button.show()
