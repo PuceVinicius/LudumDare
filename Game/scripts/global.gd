@@ -9,6 +9,10 @@ signal sig_tir
 signal sig_hp
 signal sig_hap
 
+# Death signals
+signal sig_tir_death
+signal sig_thi_death
+
 # Dialog signal
 signal sig_dialog
 
@@ -24,7 +28,7 @@ export var is_working = false
 # Timers
 export var hunger_timer = 4.5
 export var thirst_timer = 3.0
-export var tired_timer = 3.0
+export var tired_timer = 4.0
 export var happy_timer = 4.5
 
 # --
@@ -118,14 +122,14 @@ func _on_event_hunger(amount):
 func _on_event_thirst(amount):
 	thirst = minmax_calc(thirst, amount)
 	emit_signal("sig_thi", thirst)
-	if thirst == 0:
+	if thirst < 0:
 		critical_thirst()
 	pass
 	
 func _on_event_tired(amount):
 	tired = minmax_calc(tired, amount)
 	emit_signal("sig_tir", tired)
-	if tired == 0:
+	if tired < 0:
 		critical_tired()
 	pass
 	
@@ -163,7 +167,7 @@ func update_thirst(delta):
 		thirst_cd -= thirst_timer
 		thirst -= 1
 		emit_signal("sig_thi", thirst)
-		if thirst == 0:
+		if thirst < 0:
 			critical_thirst()
 	else:
 		thirst_cd = cooldown_not_reached(thirst_cd, delta, 3)
@@ -174,7 +178,7 @@ func update_tired(delta):
 		tired_cd -= tired_timer
 		tired -= 1
 		emit_signal("sig_tir", tired)
-		if tired == 0:
+		if tired < 0:
 			critical_tired()
 	else:
 		tired_cd = cooldown_not_reached(tired_cd, delta, 4)
@@ -195,9 +199,11 @@ func critical_hunger():
 	pass
 
 func critical_thirst():
+	emit_signal("sig_thi_death")
 	pass
 
 func critical_tired():
+	emit_signal("sig_tir_death")
 	pass
 
 func critical_happy():
