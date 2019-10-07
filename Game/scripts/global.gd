@@ -19,8 +19,8 @@ signal sig_dialog
 export var toxicity = 0
 export var immunity = 100
 export var hunger = 100
-export var thirst = 100
-export var tired = 100
+export var thirst = 5
+export var tired = 5
 export var hp = 100
 export var happy = 100
 export var is_working = false
@@ -163,23 +163,23 @@ func update_hunger(delta):
 	pass	
 	
 func update_thirst(delta):
+	if thirst < 0:
+		critical_thirst()
 	if cooldown_reached(thirst_cd, thirst_timer, delta, 3):
 		thirst_cd -= thirst_timer
 		thirst -= 1
 		emit_signal("sig_thi", thirst)
-		if thirst < 0:
-			critical_thirst()
 	else:
 		thirst_cd = cooldown_not_reached(thirst_cd, delta, 3)
 	pass
 	
 func update_tired(delta):
+	if tired < 0:
+		critical_tired()
 	if cooldown_reached(tired_cd, tired_timer, delta, 4):
 		tired_cd -= tired_timer
 		tired -= 1
 		emit_signal("sig_tir", tired)
-		if tired < 0:
-			critical_tired()
 	else:
 		tired_cd = cooldown_not_reached(tired_cd, delta, 4)
 	pass
