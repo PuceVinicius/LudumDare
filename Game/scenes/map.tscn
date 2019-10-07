@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://assets/Map/final_map.png" type="Texture" id=1]
-[ext_resource path="res://scenes/character.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/HUD.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/RandomEncounter.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Map/final_map.png" type="Texture" id=2]
+[ext_resource path="res://scenes/character.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/misteryBox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/HUD.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/bunker.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 19.1158, 15.2191 )
@@ -15,11 +18,13 @@ extents = Vector2( 23.8271, 23.5728 )
 
 [node name="Root" type="Node2D"]
 
-[node name="World" type="Sprite" parent="."]
-position = Vector2( 3679.54, 3434.51 )
-texture = ExtResource( 1 )
+[node name="RandomEncounter" parent="." instance=ExtResource( 1 )]
 
-[node name="Character" parent="World" instance=ExtResource( 2 )]
+[node name="World" type="Sprite" parent="."]
+position = Vector2( 3682.06, 3437.03 )
+texture = ExtResource( 2 )
+
+[node name="Character" parent="World" instance=ExtResource( 3 )]
 editor/display_folded = true
 position = Vector2( 3075.91, 3152.43 )
 
@@ -1778,16 +1783,183 @@ polygon = PoolVector2Array( 7472.99, 6408.89, 7801.75, 6412.4, 7807.03, 6452.84,
 [node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="World/WorldCollision"]
 polygon = PoolVector2Array( 1089, 191, 1088, 216, 1334, 216, 1336, 191 )
 
+[node name="MisteryBoxes" type="Node2D" parent="World"]
+editor/display_folded = true
+
+[node name="MB1" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( -512.107, 1128.97 )
+
+[node name="root" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 2520.9, 2944.35 )
+
+[node name="root2" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 3410.44, 3093.27 )
+
+[node name="root3" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 3023.15, 3408.74 )
+
+[node name="root4" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 3263.15, 3550.84 )
+
+[node name="root5" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 3457.89, 3356.1 )
+
+[node name="root6" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 3453.68, 3657.16 )
+
+[node name="root7" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 3550.52, 3544.52 )
+
+[node name="root8" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 3744.2, 3356.1 )
+
+[node name="root9" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 3742.1, 3655.05 )
+
+[node name="root10" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( -888.533, 1265.62 )
+
+[node name="root11" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 3023.34, 2992.9 )
+
+[node name="root12" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 3843.68, 3651.89 )
+
+[node name="root13" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 3936.32, 3355.05 )
+
+[node name="root14" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 3932.11, 3185.57 )
+
+[node name="root15" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 3360.53, 2925.57 )
+
+[node name="root16" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 3912.11, 2987.68 )
+
+[node name="root17" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 3144.03, 2602.45 )
+
+[node name="root18" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 2760.27, 2318.04 )
+
+[node name="root19" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 1252.46, -3937.98 )
+
+[node name="root20" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 1057.66, -3980.84 )
+
+[node name="root21" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 960.259, -4029.54 )
+
+[node name="root22" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 1020.65, -4126.94 )
+
+[node name="root23" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 1207.66, -4167.85 )
+
+[node name="root24" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 1349.86, -4128.89 )
+
+[node name="root25" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 1273.89, -4304.21 )
+
+[node name="root26" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 186.854, -2857.14 )
+
+[node name="root27" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( -1152.07, -1338.5 )
+
+[node name="root28" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( -3337.56, -2912.62 )
+
+[node name="root29" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( -3144.71, -3006.12 )
+
+[node name="root30" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( -3867.43, -3341.18 )
+
+[node name="root31" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( -3505.09, -3294.43 )
+
+[node name="root32" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( -2258.36, -3344.52 )
+
+[node name="root33" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( -2184.34, -3438.02 )
+
+[node name="root34" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( -3074.58, -3878.27 )
+
+[node name="root35" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( -2928.48, -3975.43 )
+
+[node name="root36" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( -2833.03, -3876.08 )
+
+[node name="root37" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( -3433.02, -4450.74 )
+
+[node name="root38" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( -2859.02, -4011.61 )
+
+[node name="root39" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( -1354.74, -1816.48 )
+
+[node name="root40" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( -1362.3, -2000.26 )
+
+[node name="root41" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 4.53125, -848.097 )
+
+[node name="root42" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 246.214, -853.132 )
+
+[node name="root43" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 578.528, -853.132 )
+
+[node name="root44" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 820.21, -848.097 )
+
+[node name="root45" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 820.21, -1135.1 )
+
+[node name="root46" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 578.528, -1145.17 )
+
+[node name="root47" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 241.179, -1142.65 )
+
+[node name="root48" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 2.01367, -1142.65 )
+
+[node name="root49" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( -0.503906, -1424.61 )
+
+[node name="root50" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 243.697, -1429.65 )
+
+[node name="root51" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 578.528, -1427.13 )
+
+[node name="root52" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( 820.21, -1424.61 )
+
+[node name="root53" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( -766.996, 2267.73 )
+
+[node name="root54" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( -1002.85, 2214.73 )
+
+[node name="root55" parent="World/MisteryBoxes" instance=ExtResource( 4 )]
+position = Vector2( -817.346, 2116.68 )
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="HUD" parent="CanvasLayer" instance=ExtResource( 3 )]
+[node name="HUD" parent="CanvasLayer" instance=ExtResource( 5 )]
 margin_left = 13.0
 margin_top = 12.0
 margin_bottom = 161.0
-[connection signal="sig_hap" from="World/Character" to="CanvasLayer/HUD" method="_on_Character_sig_hap"]
-[connection signal="sig_hp" from="World/Character" to="CanvasLayer/HUD" method="_on_Character_sig_hp"]
-[connection signal="sig_hun" from="World/Character" to="CanvasLayer/HUD" method="_on_Character_sig_hun"]
-[connection signal="sig_imm" from="World/Character" to="CanvasLayer/HUD" method="_on_Character_sig_imm"]
-[connection signal="sig_thi" from="World/Character" to="CanvasLayer/HUD" method="_on_Character_sig_thi"]
-[connection signal="sig_tir" from="World/Character" to="CanvasLayer/HUD" method="_on_Character_sig_tir"]
-[connection signal="sig_tox" from="World/Character" to="CanvasLayer/HUD" method="_on_Character_sig_tox"]
+
+[node name="Area2D" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3035.7, 7300.53 )

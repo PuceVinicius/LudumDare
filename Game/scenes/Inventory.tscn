@@ -25,7 +25,6 @@ script = ExtResource( 4 )
 [node name="Meat" type="Node2D" parent="Foods Pocket"]
 
 [node name="Drinks Pocket" type="Node2D" parent="."]
-editor/display_folded = true
 script = ExtResource( 5 )
 
 [node name="Water" type="Node2D" parent="Drinks Pocket"]
@@ -37,7 +36,6 @@ script = ExtResource( 5 )
 [node name="Beer" type="Node2D" parent="Drinks Pocket"]
 
 [node name="Medical Pocket" type="Node2D" parent="."]
-editor/display_folded = true
 script = ExtResource( 6 )
 
 [node name="Medical Herb" type="Node2D" parent="Medical Pocket"]

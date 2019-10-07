@@ -5,11 +5,7 @@ var encounter_type = ""
 var disaster = false
 var chance_of_disaster = 0.0
 var encounter_attribute = ""
-# var b = "text"
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -17,9 +13,10 @@ func _ready():
 
 func _init(type, chance):
 	var rng = RandomNumberGenerator.new()
+	rng.randomize()
 	encounter_type = type
 	chance_of_disaster = chance
-	var x = rng.rand_range(0,6)
+	var x = rng.randi_range(1,6)
 	match x:
 		0:
 			encounter_attribute = "item"
@@ -38,6 +35,7 @@ func _init(type, chance):
 	
 func generate(min_mod, max_mod):
 	var rng = RandomNumberGenerator.new()
+	rng.randomize()
 	var mod = rng.randi_range(min_mod, max_mod)
 	
 	var x = rng.randf()
@@ -48,32 +46,30 @@ func generate(min_mod, max_mod):
 		disaster = false
 	
 	match encounter_attribute:
-		"item":
-			var socorro = true
-			#finds random item
 		"hunger":
-			global.hunger += mod #adicionar número aleatório multiplicado por disaster
+			global._on_event_hunger(mod)
 			#affects hunger meter
 		"thirst":
-			global.thirst += mod
+			global._on_event_thirst(mod)
 			#affects thirst meter
 		"happiness":
-			global.happy += mod
+			global._on_event_happy(mod)
 			#afects happiness meter
 		"health":
-			global.hp += mod
+			global._on_event_hp(mod)
 			#afects health points
 		"immunity":
-			global.immunity += mod
+			global._on_event_immunity(mod)
 			#afects infection ratio
 		"toxicity":
-			global.toxicity += abs(mod)
+			global._on_event_toxicity(mod)
 			#affects infection total
 			
 func event_choice(mod):
 	var s = ""
 	var x = -1
 	var rng = RandomNumberGenerator.new()
+	rng.randomize()
 	
 	match encounter_attribute:
 		"hunger":
