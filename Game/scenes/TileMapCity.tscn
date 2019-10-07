@@ -5,9 +5,9 @@
 [sub_resource type="TileSet" id=1]
 0/name = "ceelingRed"
 0/texture = ExtResource( 1 )
-0/tex_offset = Vector2( 0, 0 )
+0/tex_offset = Vector2( 1, 1 )
 0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 135, 67 )
+0/region = Rect2( 51, 34, 16, 16 )
 0/tile_mode = 1
 0/autotile/bitmask_mode = 1
 0/autotile/bitmask_flags = [ Vector2( 0, 0 ), 432, Vector2( 0, 1 ), 54, Vector2( 0, 2 ), 144, Vector2( 0, 3 ), 18, Vector2( 1, 0 ), 216, Vector2( 1, 1 ), 27, Vector2( 1, 2 ), 48, Vector2( 1, 3 ), 16, Vector2( 2, 0 ), 504, Vector2( 2, 1 ), 63, Vector2( 2, 2 ), 56, Vector2( 2, 3 ), 186, Vector2( 3, 0 ), 438, Vector2( 3, 1 ), 219, Vector2( 3, 2 ), 24, Vector2( 3, 3 ), 146, Vector2( 4, 0 ), 255, Vector2( 4, 1 ), 507, Vector2( 4, 2 ), 176, Vector2( 4, 3 ), 50, Vector2( 5, 0 ), 447, Vector2( 5, 1 ), 510, Vector2( 5, 2 ), 152, Vector2( 5, 3 ), 26, Vector2( 6, 0 ), 511, Vector2( 6, 2 ), 178, Vector2( 6, 3 ), 154, Vector2( 7, 0 ), 511, Vector2( 7, 2 ), 58, Vector2( 7, 3 ), 184 ]
@@ -66,7 +66,7 @@
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 68, 68, 67, 152 )
 4/tile_mode = 1
-4/autotile/bitmask_mode = 0
+4/autotile/bitmask_mode = 1
 4/autotile/bitmask_flags = [  ]
 4/autotile/icon_coordinate = Vector2( 0, 0 )
 4/autotile/tile_size = Vector2( 16, 16 )
@@ -75,9 +75,15 @@
 4/autotile/navpoly_map = [  ]
 4/autotile/priority_map = [  ]
 4/autotile/z_index_map = [  ]
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shapes = [  ]
+4/occluder_offset = Vector2( 1, 1 )
+4/navigation_offset = Vector2( 1, 1 )
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": null,
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 4/z_index = 0
 5/name = "wallYellow"
 5/texture = ExtResource( 1 )
@@ -1025,19 +1031,22 @@
 55/tex_offset = Vector2( 0, 0 )
 55/modulate = Color( 1, 1, 1, 1 )
 55/region = Rect2( 102, 323, 50, 84 )
-55/tile_mode = 1
-55/autotile/bitmask_mode = 1
-55/autotile/bitmask_flags = [ Vector2( 0, 0 ), 432, Vector2( 0, 1 ), 438, Vector2( 0, 2 ), 511, Vector2( 0, 3 ), 54, Vector2( 0, 4 ), 63, Vector2( 1, 0 ), 504, Vector2( 1, 1 ), 511, Vector2( 1, 2 ), 511, Vector2( 1, 3 ), 63, Vector2( 1, 4 ), 63, Vector2( 2, 0 ), 216, Vector2( 2, 1 ), 219, Vector2( 2, 2 ), 511, Vector2( 2, 3 ), 27, Vector2( 2, 4 ), 63 ]
+55/tile_mode = 2
 55/autotile/icon_coordinate = Vector2( 0, 0 )
 55/autotile/tile_size = Vector2( 16, 16 )
 55/autotile/spacing = 1
 55/autotile/occluder_map = [  ]
 55/autotile/navpoly_map = [  ]
-55/autotile/priority_map = [  ]
 55/autotile/z_index_map = [  ]
-55/occluder_offset = Vector2( 0, 0 )
-55/navigation_offset = Vector2( 0, 0 )
-55/shapes = [  ]
+55/occluder_offset = Vector2( 1, 1 )
+55/navigation_offset = Vector2( 1, 1 )
+55/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": null,
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 55/z_index = 0
 56/name = "floorYellow"
 56/texture = ExtResource( 1 )
@@ -1063,15 +1072,12 @@
 57/tex_offset = Vector2( 0, 0 )
 57/modulate = Color( 1, 1, 1, 1 )
 57/region = Rect2( 0, 323, 50, 84 )
-57/tile_mode = 1
-57/autotile/bitmask_mode = 1
-57/autotile/bitmask_flags = [ Vector2( 0, 0 ), 432, Vector2( 0, 1 ), 438, Vector2( 0, 2 ), 511, Vector2( 0, 3 ), 54, Vector2( 0, 4 ), 63, Vector2( 1, 0 ), 504, Vector2( 1, 1 ), 511, Vector2( 1, 2 ), 511, Vector2( 1, 3 ), 63, Vector2( 1, 4 ), 63, Vector2( 2, 0 ), 216, Vector2( 2, 1 ), 219, Vector2( 2, 2 ), 511, Vector2( 2, 3 ), 27, Vector2( 2, 4 ), 63 ]
+57/tile_mode = 2
 57/autotile/icon_coordinate = Vector2( 0, 0 )
 57/autotile/tile_size = Vector2( 16, 16 )
 57/autotile/spacing = 1
 57/autotile/occluder_map = [  ]
 57/autotile/navpoly_map = [  ]
-57/autotile/priority_map = [  ]
 57/autotile/z_index_map = [  ]
 57/occluder_offset = Vector2( 0, 0 )
 57/navigation_offset = Vector2( 0, 0 )
@@ -1195,4 +1201,6 @@
 [node name="TileMap" type="TileMap"]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
+cell_y_sort = true
 format = 1
