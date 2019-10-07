@@ -1968,3 +1968,4 @@ margin_bottom = 161.0
 position = Vector2( 3035.7, 7300.53 )
 
 [node name="Node2D" parent="." instance=ExtResource( 8 )]
+visible = false
