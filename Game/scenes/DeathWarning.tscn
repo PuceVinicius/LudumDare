@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scripts/DeathWarning.gd" type="Script" id=1]
 [ext_resource path="res://assets/Buttons/Font/04B_30__.TTF" type="DynamicFontData" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://assets/Buttons/PNG/green_button11.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
@@ -29,10 +29,9 @@ Better luck next time!
 "
 
 [node name="ded button" type="TextureButton" parent="Death"]
-visible = false
-margin_left = 100.0
-margin_top = 211.0
-margin_right = 739.0
-margin_bottom = 605.0
+margin_left = 218.0
+margin_top = 184.0
+margin_right = 267.0
+margin_bottom = 233.0
 texture_normal = ExtResource( 3 )
 [connection signal="pressed" from="Death/ded button" to="." method="_on_ded_button_pressed"]
