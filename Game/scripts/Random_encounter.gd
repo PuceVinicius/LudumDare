@@ -16,9 +16,10 @@ func _ready():
 #	pass
 
 func _init(type, chance):
+	var rng = RandomNumberGenerator.new()
 	encounter_type = type
 	chance_of_disaster = chance
-	var x = rand_range(0,6)
+	var x = rng.rand_range(0,6)
 	match x:
 		0:
 			encounter_attribute = "item"
