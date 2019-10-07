@@ -16,13 +16,19 @@ _global_script_class_icons={
 [application]
 
 config/name="LudumDareGame"
-run/main_scene="res://scenes/Menu.tscn"
+run/main_scene="res://scenes/map.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 global="*res://scripts/global.gd"
-Random_encounter="*res://scripts/Random_encounter.gd"
+
+[display]
+
+window/size/width=640
+window/size/height=400
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [input]
 
@@ -39,4 +45,5 @@ ui_open_menu={
 
 [rendering]
 
+quality/2d/use_pixel_snap=true
 environment/default_environment="res://default_env.tres"
