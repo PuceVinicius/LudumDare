@@ -22,6 +22,7 @@ config/icon="res://icon.png"
 [autoload]
 
 global="*res://scripts/global.gd"
+Random_encounter="*res://scripts/Random_encounter.gd"
 
 [input]
 
