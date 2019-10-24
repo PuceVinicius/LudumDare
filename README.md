@@ -8,6 +8,6 @@ Love,
 
 Devs
 
-------
+---------
 
 Link to the LudumDare post: https://ldjam.com/events/ludum-dare/45/overthreedays-1
